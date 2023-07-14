@@ -26,6 +26,8 @@ fun fromInternetToPhonesDetailEntity(phones:PhonesDetail):PhonesDetailEntity{
         name=phones.name,
         price=phones.price,
         image=phones.image,
-
+        description = phones.description,
+        lastPrice = phones.lastPrice,
+        credit = phones.credit
     )
 }

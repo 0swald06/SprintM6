@@ -1,11 +1,13 @@
 package com.example.sprintm6
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -46,6 +48,26 @@ class FirstFragment : Fragment() {
 
 
         })
+
+        adapter.selectedPhone().observe(viewLifecycleOwner, Observer {
+
+
+            it?.let {
+                // válidar si capta la seleccion
+                Log.d("Seleccion", it.id.toString())
+
+            }
+            val bundle = Bundle().apply {
+                putString("phoneId", it.id)
+            }
+            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment, bundle)
+
+        })
+
+
+
+
+
     }
 
     override fun onDestroyView() {

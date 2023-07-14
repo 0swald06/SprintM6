@@ -3,33 +3,36 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_margin="15dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
     android:clickable="true"
     android:focusable="true"
-    app:cardCornerRadius="6dp"
-    app:cardElevation="6dp">
+    app:cardUseCompatPadding="true"
+    app:contentPadding="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="7dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="15dp">
 
 
         <ImageView
             android:id="@+id/item_imagen"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="150dp"
+            android:layout_gravity="center"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/item_nombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="Galaxy Note 20 256GB"
+            android:text="TextView"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -39,7 +42,7 @@
             android:layout_height="39dp"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="767760"
+            android:text="textView"
             android:textSize="10sp" />
 
     </LinearLayout>

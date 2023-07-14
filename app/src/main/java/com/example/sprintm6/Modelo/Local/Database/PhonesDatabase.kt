@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.sprintm6.Modelo.Local.PhonesDao
 
-@Database(entities = [PhonesEntity::class, PhonesDetailEntity::class], version =  1,
+@Database(entities = [PhonesEntity::class, PhonesDetailEntity::class], version =  2,
     exportSchema = false)
 abstract class PhonesDatabase:RoomDatabase(){
 

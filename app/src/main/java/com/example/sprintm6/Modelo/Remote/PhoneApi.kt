@@ -12,6 +12,6 @@ interface PhoneApi {
     suspend fun fechPhoneList(): Response<List<Phones>>
 
 
-    @GET("products/{id}")
+    @GET("details/{id}")
     suspend fun fechPhoneDetail(@Path("id")id:String): Response <PhonesDetail>
 }
